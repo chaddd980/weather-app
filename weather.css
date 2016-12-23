@@ -1,0 +1,114 @@
+.clear {
+  background: url(http://cdn.wallpapersafari.com/47/37/BDwLWz.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.clouds {
+  background: url(http://media.gettyimages.com/videos/jiggly-cartoon-clouds-frame-a-blue-sky-video-id105778286?s=640x640) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.rain {
+  background: url(http://www.wallpaper1080hd.com/Picture/allimg/c110321/1300B242Y42F-39240.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.snow {
+  background: url(http://www.skyhdwallpaper.com/wp-content/uploads/2014/01/Snowfall-at-Night-5.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.thunderstorm {
+  background: url(https://wallpaperscraft.com/image/teenage_mutant_ninja_turtles_rain_raphael_4851_1920x1080.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.drizzle {
+  background: url(http://istockhdwallpapers.com/wp-content/uploads/2014/06/c75cc5616917f0d2a7d97c404dd9ffb5.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.mist {
+  background: url(http://www.wallpaperawesome.com/wallpapers-awesome/wallpapers-animals-pets-puppies-awesome/wallpaper-fog-deer.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.main-div {
+  font-family: 'Indie Flower', cursive;
+}
+
+.vertical-center {
+  min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  font-family: 'Indie Flower', cursive;
+}
+
+.title {
+  font-size: 80px;
+}
+
+.temp {
+  font-size: 40px;
+  font-weight: bold;
+  position: relative;
+}
+
+.location, .description {
+  font-size: 25px;
+}
+
+.yellow {
+  color: gold;
+}
+
+.white {
+  color: white;
+}
+
+.green {
+  color: green;
+}
+
+.grey {
+  color: grey;
+}
+
+.pink {
+  color: hotpink;
+}
+
+.black {
+  color: black;
+}
+
+.btn {
+  font-weight: bolder;;
+}

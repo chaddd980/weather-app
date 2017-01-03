@@ -1,4 +1,10 @@
 $(document).ready(function(){
+  jQuery.ajaxPrefilter(function(options) {
+    if (options.crossDomain && jQuery.support.cors) {
+        options.url = 'https://cors-anywhere.herokuapp.com/' + options.url;
+    }
+  });
+
   function getCelcius(kelvin){
     return kelvin - 273.15;
   };
@@ -33,7 +39,7 @@ $(document).ready(function(){
             temperature_c = Math.round(getCelcius(response.main.temp));
             temperature_c_min = getCelcius(response.main.temp_min);
             temperature_c_max = getCelcius(response.main.temp_max);
-            temperature_f = getFahrenheit(response.main.temp);
+            temperature_f = Math.round(getFahrenheit(response.main.temp));
             temperature_f_min = getFahrenheit(response.main.temp_min);
             temperature_f_max = getFahrenheit(response.main.temp_max);
             country = response.sys.country;
@@ -43,28 +49,23 @@ $(document).ready(function(){
 
             if (description.includes("Clear")) {
               $("body").addClass("clear green");
-              $(".btn").addClass("green");
             } else if (description.includes("Clouds")) {
               $("body").addClass("clouds grey");
-              $(".btn").addClass("grey");
             } else if (description.includes("Rain")) {
               $("body").addClass("rain yellow");
-              $(".btn").addClass("yellow");
             } else if (description.includes("Drizzle")) {
               $("body").addClass("drizzle pink");
-              $(".btn").addClass("pink");
             } else if (description.includes("Thunderstorm")) {
               $("body").addClass("thunderstorm white");
-              $(".btn").addClass("white");
             } else if (description.includes("Snow")) {
               $("body").addClass("snow");
-              $(".btn").addClass("black");
             } else if (description.includes("Mist")) {
               $("body").addClass("mist");
             }
-            $(".location").append(city + ", " + country)
-            $(".temp").append(temperature_c + "<button type='button' class='btn btn-link'>°C</button>");
-            $("body").append(temperature_f);
+            $(".location").append(city + ", " + country);
+            $(".temp").append("<p class='celcius'>" + temperature_c + "<button type='button' class='btn btn-link cel'>°C</button></p>");
+            $(".temp").append("<p class='fahren'>" + temperature_f + "<button type='button' class='btn btn-link fahr'>°F</button></p>");
+            $(".fahren").hide();
             $(".description").append(description);
           }
         });
@@ -72,4 +73,8 @@ $(document).ready(function(){
     );
   }
   getWeatherInfo();
+  $(document).on('click', '.btn', function() {
+    $(".fahren").toggle();
+    $(".celcius").toggle();
+  });
 });

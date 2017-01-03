@@ -34,6 +34,9 @@ $(document).ready(function(){
       function(result) {
         $.ajax({
           url: 'http://api.openweathermap.org/data/2.5/weather?lat=' + lat + '&lon=' + long + '&appid=784ef7d52b04b55508638eff3590484a',
+          complete: function(){
+            $('#loading').hide();
+          },
           success: function(response) {
             description = response.weather[0].main;
             temperature_c = Math.round(getCelcius(response.main.temp));

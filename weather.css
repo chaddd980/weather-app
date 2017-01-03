@@ -22,6 +22,22 @@
   background-size: cover;
 }
 
+@media only screen and (max-width: 767px) {
+  .title {
+    font-size: 120px;
+  }
+
+  .temp {
+    font-size: 60px;
+    font-weight: bold;
+    position: relative;
+  }
+
+  .location, .description {
+    font-size: 40px;
+  }
+}
+
 .snow {
   background: url(http://www.skyhdwallpaper.com/wp-content/uploads/2014/01/Snowfall-at-Night-5.jpg) no-repeat center center fixed;
   -webkit-background-size: cover;

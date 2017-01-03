@@ -114,3 +114,10 @@ ul {
   width: 100%;
   height: 100%
 }
+
+@media only screen and (max-width: 767px) {
+  #loading {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}

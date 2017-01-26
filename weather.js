@@ -48,6 +48,7 @@ $(document).ready(function(){
             country = response.sys.country;
             city = response.name;
             user_location = response.name;
+            debugger;
 
 
             if (description.includes("Clear")) {
